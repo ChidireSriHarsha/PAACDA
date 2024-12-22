@@ -1,0 +1,11 @@
+Now-a-days Data is not just values as this can be used to identify hidden information from many virtual areas such as detecting attacks from online application, customer purchase behaviour in online application, data sharing or friend’s community in graph based social network and many more areas. Sometime because of system error or malicious attackers this data will be corrupted and while analysis data engineers may get wrong result.
+Data corruption or outliers refers to abnormal values which may fall between normal data.
+To detect corrupted or outliers many machine learning based algorithms are introduced such Local Outlier Factor (LOF), One class SVM, KMEANS or DBSCAN clustering, Isolation Forest and many more. All this algorithms detection accuracy is satisfactory but not up to the mark.
+To overcome from above issued author of this paper introducing novel algorithm called PAACDA (Proximity based Adamic Adar Corruption Detection Algorithm) which is based on ADAMIC ADAR index. Adamic is graph based algorithm which evaluate local similarity measurement that predicts links in a social network. If similarity is too high then index will be consider as corrupted otherwise normal. By using Adamic ADAR PACCDA will calculate accuracy of each value by using below functions
+1)	The mean is calculated for the column being analysed.
+2)	The range is set as mean/4.
+3)	Each data instance is iterated where x is each data instance.
+4)	If the instance is missing then the PAACDA Index value is set to infinity.
+5)	The PAACDA Index is compared amongst each other and the set of corrupted values is determined.
+6)	The accuracy metric is obtained by comparing predicted corrupted value with dataset true values.
+In propose paper author has used many algorithms but implementing all this algorithms is quite difficult so we have implemented LOF, Isolation Forest, One Class SVM and Propose PAACDA algorithm.
